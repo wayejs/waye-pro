@@ -1,7 +1,12 @@
-# cqb-dict-fe
+# waye-pro
 
-## Project setup
-```
+> 通过 vue-cli 生成的项目脚手架
+
+## 使用
+
+```bash
+git clone https://github.com/wayejs/waye-pro.git project-xxx
+cd project-xxx
 yarn install
 ```
 
