@@ -3,16 +3,16 @@
     <div class="ql-login__title">
       Waye pro
     </div>
-    <el-card class="ql-login__form">
+    <div class="ql-login__form">
       <!-- <div slot="header">
         <i class="cqbicon icon-login"></i> 欢迎登录实验室管理端
       </div> -->
       <el-form :model="userForm" ref="form" :rules="rules">
         <el-form-item prop="userName">
-          <el-input prefix-icon="cqbicon icon-user" v-model="userForm.userName" placeholder="用户名"></el-input>
+          <el-input prefix-icon="wyicon icon-user-o" v-model="userForm.userName" placeholder="用户名"></el-input>
         </el-form-item>
         <el-form-item prop="password">
-          <el-input prefix-icon="cqbicon icon-password" type="password" v-model="userForm.password" placeholder="密码"></el-input>
+          <el-input prefix-icon="wyicon icon-lock" type="password" v-model="userForm.password" placeholder="密码"></el-input>
         </el-form-item>
         <el-form-item prop="kaptcha">
           <el-input style="width:100px" v-model="userForm.kaptcha" placeholder="验证码" maxlength="4"></el-input>
@@ -23,11 +23,11 @@
           <el-button type="primary" size="large" native-type="submit" :loading="submited" @click.prevent="login" style="width: 100%">登录</el-button>
         </el-form-item>
       </el-form>
-    </el-card>
+    </div>
 
     <div class="footer">
-      <img src="../assets/img/logo-tran.png" alt="">
-      <div>上海蔚一信息技术有限公司</div>
+      <!-- <img src="../assets/img/logo-blue.png" alt=""> -->
+      <div>Copyright © 2019 上海蔚一信息技术有限公司</div>
     </div>
   </div>
 </template>
@@ -106,7 +106,7 @@ export default {
 @import "../assets/scss/mixins/mixins.scss";
 
 @include b(login) {
-  background: #f0f2f5 url("../assets/img/background.svg") no-repeat center center;
+  background: #f0f2f5 url("../assets/img/background.jpg");
   background-size: 100%;
   width: 100%;
   min-height: 100%;
@@ -147,7 +147,6 @@ export default {
     font-size: 56px;
     font-family: "STXingkai";
     font-weight: 700;
-    color: #fff;
     margin-bottom: 60px;
   }
   @include e(img) {
@@ -162,7 +161,7 @@ export default {
     display: flex;
     flex-direction: column;
     margin-top: 30px;
-    color: #fff;
+    color: #808695;
     img {
       margin-bottom: 6px;
     }

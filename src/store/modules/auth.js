@@ -2,7 +2,7 @@ import Vue from 'vue'
 import { login, logout } from '../../api/auth'
 import navConfig from '@/config/route.config'
 import cloneDeep from 'lodash/cloneDeep'
-let cqbMgrUserInfo = Vue.ls.get('userInfo')
+let wayeUserInfo = Vue.ls.get('userInfo')
 let codeMap = {}
 
 export const SUPER_ADMIN = 'admin'
@@ -56,10 +56,10 @@ const accessedRoutePaths = (permissions, codeMap) => {
 }
 const user = {
   state: {
-    userName: cqbMgrUserInfo ? cqbMgrUserInfo.userName : '',
-    userCode: cqbMgrUserInfo ? cqbMgrUserInfo.userCode : '',
-    userId: cqbMgrUserInfo ? cqbMgrUserInfo.userId : '',
-    permissions: cqbMgrUserInfo ? cqbMgrUserInfo.permissions : [],
+    userName: wayeUserInfo ? wayeUserInfo.userName : '',
+    userCode: wayeUserInfo ? wayeUserInfo.userCode : '',
+    userId: wayeUserInfo ? wayeUserInfo.userId : '',
+    permissions: wayeUserInfo ? wayeUserInfo.permissions : [],
     asyncRoutes: []
   },
 
