@@ -7,6 +7,9 @@
 ```bash
 git clone https://github.com/wayejs/waye-pro.git project-xxx
 cd project-xxx
+git remote remove origin
+git remote add origin [新的git仓库链接]
+git push -u origin master
 yarn install
 ```
 
