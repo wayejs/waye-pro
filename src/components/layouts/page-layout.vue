@@ -347,7 +347,7 @@ export default {
       }
       .el-menu {
         border: none;
-        .cqbicon {
+        .wyicon {
           margin-right: 4px;
         }
         .el-menu-item {

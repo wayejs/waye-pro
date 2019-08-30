@@ -13,7 +13,7 @@ module.exports = {
   devServer: {
     port: '9000',
     proxy: {
-      '/cqb-base-mgr': {
+      '/api': {
         target: process.env.VUE_APP_PROXY_TARGET,
         ws: false,
         changeOrigin: true
