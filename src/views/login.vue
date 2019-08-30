@@ -4,9 +4,6 @@
       Waye pro
     </div>
     <div class="ql-login__form">
-      <!-- <div slot="header">
-        <i class="cqbicon icon-login"></i> 欢迎登录实验室管理端
-      </div> -->
       <el-form :model="userForm" ref="form" :rules="rules">
         <el-form-item prop="userName">
           <el-input prefix-icon="wyicon icon-user-o" v-model="userForm.userName" placeholder="用户名"></el-input>
@@ -25,9 +22,8 @@
       </el-form>
     </div>
 
-    <div class="footer">
-      <!-- <img src="../assets/img/logo-blue.png" alt=""> -->
-      <div>Copyright © 2019 上海蔚一信息技术有限公司</div>
+    <div class="ql-login__footer">
+      Copyright © 2019 上海蔚一信息技术有限公司
     </div>
   </div>
 </template>
@@ -157,7 +153,7 @@ export default {
     border-radius: 3px;
     margin-left: 2px;
   }
-  .footer{
+  @include e(footer){
     display: flex;
     flex-direction: column;
     margin-top: 30px;
