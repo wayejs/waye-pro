@@ -11,7 +11,6 @@ export default {
     const notKeep = (
       <router-view />
     )
-    // multi tab 暂时未加
     return meta.keepAlive || getters.multiTab ? inKeep : notKeep
   }
 }

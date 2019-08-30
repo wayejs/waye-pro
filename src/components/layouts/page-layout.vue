@@ -46,14 +46,17 @@
                 {{userName}}
               </span>
               <el-dropdown-menu slot="dropdown">
-                <el-dropdown-item command="pwd"><i class="cqbicon icon-password"></i> 修改密码</el-dropdown-item>
-                <el-dropdown-item divided command="logout"><i class="cqbicon icon-logout"></i> 注销</el-dropdown-item>
+                <el-dropdown-item command="pwd"><wy-icon name="lock"></wy-icon> 修改密码</el-dropdown-item>
+                <el-dropdown-item divided command="logout"><wy-icon name="logout"></wy-icon> 注销</el-dropdown-item>
               </el-dropdown-menu>
             </el-dropdown>
           </div>
         </el-header>
         <el-main class="ql-layout__main">
-          <slot></slot>
+          <multi-tab></multi-tab>
+          <div class="ql-layout__content">
+            <slot></slot>
+          </div>
         </el-main>
         <el-footer height="30px" class="ql-layout__footer">
           @上海蔚一信息技术有限公司
@@ -66,19 +69,21 @@
 <script>
 import { mapGetters } from 'vuex'
 import { EventBus } from '@/utils/event-bus'
+import MultiTab from '@/components/multi-tab'
 import QlMenu from './menu'
 const ASIDE_WIDTH_MINI = 64
 const ASIDE_WIDTH_FULL = 230
 export default {
   name: 'PageLayout',
   components: {
-    QlMenu
+    QlMenu,
+    MultiTab
   },
   data () {
     return {
       msgTimer: null,
       isCollapse: false,
-      msgCount: 0,
+      msgCount: 3,
       msgId: null,
       msgData: {
         readTime: '',
@@ -240,9 +245,6 @@ export default {
         padding: 0 24px;
         font-size: 24px;
         transition: all 0.3s;
-        &:hover {
-          background: rgba(0, 0, 0, 0.2);
-        }
       }
       .el-breadcrumb {
         line-height: $--header-height;
@@ -394,7 +396,14 @@ export default {
       }
     }
     &__main {
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    &__content {
       background: $main-bg-color;
+      padding: 20px;
+      flex: 1;
     }
     &__footer {
       text-align: center;
