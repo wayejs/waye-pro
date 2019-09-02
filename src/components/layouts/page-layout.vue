@@ -351,10 +351,7 @@ export default {
           margin-right: 4px;
         }
         .el-menu-item {
-          height: 40px;
-          line-height: 40px;
           background: $aside-bg-color;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
           &:hover {
             color: #fff !important;
           }
@@ -373,11 +370,6 @@ export default {
         color: rgba(255, 255, 255, 0.9);
       }
       .el-submenu {
-        .el-submenu__title {
-          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-          height: 50px;
-          line-height: 50px;
-        }
         &.is-active {
           background: #037dc8;
           &.is-opened {
